@@ -1,0 +1,53 @@
+{
+  "companyName": "My SaaS Company",
+  "founderName": "Founder Name",
+  "productDescription": "SaaS product with in-house marketing team managing growth, content, and paid acquisition",
+  "icpPrimary": "SMBs in [industry] who need [specific outcome]",
+  "stage": "growth",
+
+  "brand": {
+    "primaryColor": "#2563eb",
+    "secondaryColor": "#1d4ed8",
+    "darkColor": "#0f172a",
+    "lightColor": "#f8fafc",
+    "headlineFont": "Inter",
+    "bodyFont": "Inter"
+  },
+
+  "jira": {
+    "host": "your-instance.atlassian.net",
+    "email": "you@company.com",
+    "apiToken": "YOUR_JIRA_API_TOKEN",
+    "project": "MARKETING"
+  },
+
+  "slack": {
+    "botToken": "xoxb-YOUR_SLACK_BOT_TOKEN",
+    "defaultChannel": "C_MARKETING"
+  },
+
+  "serper": {
+    "apiKey": "YOUR_SERPER_API_KEY"
+  },
+
+  "team": [
+    {
+      "name": "Head of Marketing",
+      "role": "Marketing Lead",
+      "slackId": "U_MARKETING_LEAD",
+      "jiraAccountId": ""
+    },
+    {
+      "name": "Growth Manager",
+      "role": "Paid Acquisition",
+      "slackId": "U_GROWTH_MGR",
+      "jiraAccountId": ""
+    },
+    {
+      "name": "Content Writer",
+      "role": "Content & SEO",
+      "slackId": "U_CONTENT",
+      "jiraAccountId": ""
+    }
+  ]
+}

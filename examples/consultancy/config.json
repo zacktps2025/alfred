@@ -1,0 +1,30 @@
+{
+  "companyName": "My Consultancy",
+  "founderName": "Founder Name",
+  "productDescription": "Solo consultant or small advisory firm — strategy, implementation, and fractional CMO services",
+  "icpPrimary": "Funded startups or established SMBs who need senior marketing leadership without the full-time hire",
+  "stage": "growth",
+
+  "brand": {
+    "primaryColor": "#0d9488",
+    "secondaryColor": "#0f766e",
+    "darkColor": "#1a1a2e",
+    "lightColor": "#fafafa",
+    "headlineFont": "Inter",
+    "bodyFont": "Inter"
+  },
+
+  "jira": {
+    "host": "your-instance.atlassian.net",
+    "email": "you@consultancy.com",
+    "apiToken": "YOUR_JIRA_API_TOKEN",
+    "project": "CLIENTS"
+  },
+
+  "slack": {
+    "botToken": "xoxb-YOUR_SLACK_BOT_TOKEN",
+    "defaultChannel": "C_GENERAL"
+  },
+
+  "team": []
+}

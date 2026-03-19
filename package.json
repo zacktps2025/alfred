@@ -1,0 +1,73 @@
+{
+  "name": "alfred-agency",
+  "version": "1.0.0",
+  "description": "Alfred — The open-source agency brain for AI copilots. MCP server + skills for managing projects, teams, clients, ads, funnels, and more. Full dashboard at alfredify.com",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "alfred": "dist/index.js",
+    "alfred-init": "dist/init.js"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node --format esm && bun build src/init.ts --outdir dist --target node --format esm",
+    "dev": "bun --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "init": "bun run src/init.ts",
+    "inspect": "npx @modelcontextprotocol/inspector bun run src/index.ts",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "alfred",
+    "alfred-agency",
+    "agency",
+    "agency-os",
+    "smma",
+    "digital-agency",
+    "project-management",
+    "ad-management",
+    "funnels",
+    "jira",
+    "slack",
+    "ai-tools",
+    "claude",
+    "claude-code",
+    "cursor",
+    "agent-skills",
+    "automation"
+  ],
+  "author": "Alfred by Alfredify <hello@alfredify.com>",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/alfredify/alfred",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfredify/alfred.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alfredify/alfred/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist/",
+    "skills/",
+    "templates/",
+    "examples/",
+    "docs/",
+    "LICENSE",
+    "README.md"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "picocolors": "^1.1.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

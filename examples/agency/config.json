@@ -1,0 +1,64 @@
+{
+  "companyName": "My Agency",
+  "founderName": "Founder Name",
+  "productDescription": "Full-service digital marketing agency — ads, content, design, development",
+  "icpPrimary": "E-commerce brands doing $1M-10M/year who need to scale paid acquisition",
+  "stage": "growth",
+
+  "brand": {
+    "primaryColor": "#8535e9",
+    "secondaryColor": "#6c2bd9",
+    "darkColor": "#080a2d",
+    "lightColor": "#fafafa",
+    "headlineFont": "Kanit",
+    "bodyFont": "Inter"
+  },
+
+  "jira": {
+    "host": "your-instance.atlassian.net",
+    "email": "you@agency.com",
+    "apiToken": "YOUR_JIRA_API_TOKEN",
+    "project": "AGENCY"
+  },
+
+  "slack": {
+    "botToken": "xoxb-YOUR_SLACK_BOT_TOKEN",
+    "defaultChannel": "C0123456789"
+  },
+
+  "serper": {
+    "apiKey": "YOUR_SERPER_API_KEY"
+  },
+
+  "vercel": {
+    "token": "YOUR_VERCEL_TOKEN",
+    "projectName": "agency-website"
+  },
+
+  "team": [
+    {
+      "name": "Media Buyer",
+      "role": "Paid Media Manager",
+      "slackId": "U_MEDIA_BUYER",
+      "jiraAccountId": ""
+    },
+    {
+      "name": "Content Manager",
+      "role": "Content & Social",
+      "slackId": "U_CONTENT_MGR",
+      "jiraAccountId": ""
+    },
+    {
+      "name": "Designer",
+      "role": "Creative Director",
+      "slackId": "U_DESIGNER",
+      "jiraAccountId": ""
+    },
+    {
+      "name": "Developer",
+      "role": "Web Developer",
+      "slackId": "U_DEVELOPER",
+      "jiraAccountId": ""
+    }
+  ]
+}
