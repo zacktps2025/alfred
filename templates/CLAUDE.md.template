@@ -36,19 +36,32 @@ Think like a team member. When asked for one thing, consider the surrounding sys
 
 | Folder | What belongs here |
 |--------|------------------|
-| `/projects/` | Active client projects and deliverables |
-| `/sops/` | Standard operating procedures |
-| `/reports/` | Generated reports and analytics |
-| `/content/` | Content drafts, social posts, email campaigns |
-| `/proposals/` | Client proposals and contracts |
+| `/projects/` | Active client projects, briefs, and deliverables |
+| `/sops/` | Standard operating procedures for repeatable work |
+| `/reports/` | Generated reports, analytics, and performance data |
+| `/content/` | Content drafts — social posts, blog articles, email campaigns, video scripts |
+| `/proposals/` | Client proposals, contracts, and pricing documents |
+| `/assets/` | Brand assets, templates, and design files |
 
 ---
 
 ## Team
 
 {{#TEAM}}
-- **{{NAME}}** — {{ROLE}} (Slack: {{SLACK_ID}}, Jira: {{JIRA_ID}})
+### {{NAME}} — {{ROLE}}
+- **Slack:** {{SLACK_ID}}
+- **Jira:** {{JIRA_ID}}
+- **Timezone:** {{TIMEZONE}}
+- **Focus:** {{PRIMARY_RESPONSIBILITY}}
 {{/TEAM}}
+
+<!-- Example:
+### Marcus Chen — Lead Developer
+- **Slack:** U0ABC12345
+- **Jira:** marcus@example.com
+- **Timezone:** EST
+- **Focus:** Frontend development, site performance, deployment pipeline
+-->
 
 ---
 
@@ -56,26 +69,52 @@ Think like a team member. When asked for one thing, consider the surrounding sys
 
 {{#JIRA}}
 ### Jira
-- Cloud URL: {{JIRA_HOST}}
-- Project: {{JIRA_PROJECT}}
-- Use Alfred MCP tools: `alfred_search_issues`, `alfred_create_issue`, `alfred_transition_issue`
+- **Cloud URL:** {{JIRA_HOST}}
+- **Project:** {{JIRA_PROJECT}}
+- **Statuses:** {{STATUS_NAMES}}
+- **Tools:** `alfred_search_issues`, `alfred_create_issue`, `alfred_transition_issue`, `alfred_comment_issue`
 {{/JIRA}}
 
 {{#SLACK}}
 ### Slack
-- Default channel: {{SLACK_CHANNEL}}
-- Use Alfred MCP tools: `alfred_post_message`, `alfred_dm_user`
+- **Primary channel:** {{SLACK_CHANNEL}}
+- **Tools:** `alfred_post_message`, `alfred_dm_user`
+- **Rule:** All team communication goes through Slack. No email for internal.
 {{/SLACK}}
+
+{{#SERPER}}
+### Web Search
+- **Tools:** `alfred_web_search`
+- **Use for:** Prospect research, competitor monitoring, market analysis
+{{/SERPER}}
+
+{{#VERCEL}}
+### Vercel
+- **Tools:** `alfred_list_deployments`
+- **Project:** {{VERCEL_PROJECT}}
+{{/VERCEL}}
+
+---
+
+## Active Clients
+
+<!-- Keep this current — Alfred uses it for context in proposals, reports, and outreach -->
+
+| Client | Service | Monthly Value | Status | Jira Project |
+|--------|---------|--------------|--------|-------------|
+| Meridian Fitness | Meta Ads + Landing Pages | $3,500/mo | Active | MER |
+| Coastal Dental Group | SEO + Content | $2,800/mo | Active | CDG |
+| NovaTech Solutions | Full-Stack Marketing | $5,200/mo | Active | NTS |
 
 ---
 
 ## Operating Principles
 
-1. **Ship over perfect** — done is better than polished
-2. **Automate the repeatable** — if you do it 3 times, build a system
-3. **Communicate proactively** — bad news early is better than surprises late
-4. **Measure what matters** — track outcomes, not activity
-5. **Client first, always** — every decision filters through client impact
+1. **Ship over perfect** — done is better than polished. Iterate fast.
+2. **Automate the repeatable** — if you do it 3 times, build an SOP. If you do it 10 times, automate it.
+3. **Communicate proactively** — bad news early is better than surprises late. Send the client update before they ask.
+4. **Measure what matters** — track outcomes (revenue, conversions, retention), not activity (hours, tasks completed).
+5. **Client first, always** — every decision filters through client impact. If it doesn't move the needle for clients, deprioritize it.
 
 ---
 
@@ -92,17 +131,32 @@ Use these labels in documents and communications:
 
 ## Alfred Skills Available
 
-Your AI copilot has these skills installed:
-- **alfred-ops** — Sprint planning, task management, capacity
-- **alfred-clients** — Client onboarding, health scoring, retention
-- **alfred-ads** — Campaign architecture, ad copy, A/B testing
-- **alfred-funnels** — Funnel design, offers, landing pages, CRO
-- **alfred-content** — Posts, blogs, emails, video scripts, repurposing
-- **alfred-sales** — Outreach, proposals, discovery calls, objections
-- **alfred-reports** — Client updates, briefings, KPI dashboards
-- **alfred-systems** — SOPs, workflows, automation, tool decisions
-- **alfred-finance** — Pricing, margins, invoicing, P&L
-- **alfred-design** — Typography, color, layout, responsive, performance
+Your AI copilot has these agency intelligence modules:
+
+| Skill | Domain | What It Gives You |
+|-------|--------|------------------|
+| `alfred-ops` | Operations | Sprint planning, task management, capacity analysis |
+| `alfred-clients` | Clients | Onboarding playbooks, health scoring, retention strategy |
+| `alfred-ads` | Paid Media | Campaign architecture, ad copy frameworks, A/B testing |
+| `alfred-funnels` | Funnels | Funnel design, offers, landing pages, CRO |
+| `alfred-content` | Content | Posts, blogs, emails, video scripts, repurposing |
+| `alfred-sales` | Sales | Outreach, proposals, discovery calls, objection handling |
+| `alfred-reports` | Reporting | Client updates, morning briefings, KPI dashboards |
+| `alfred-systems` | Systems | SOPs, automation design, workflow optimization |
+| `alfred-finance` | Finance | Pricing strategy, margins, invoicing, P&L |
+| `alfred-design` | Design | Typography, color systems, responsive layout, performance |
+
+---
+
+## Hard Rules
+
+<!-- Add non-negotiable rules your AI must always follow -->
+
+- Never share one client's data or results with another client
+- Never commit to timelines without checking team capacity
+- Never post to client-facing channels without human approval
+- Always use Alfred tools for Jira/Slack actions — never suggest manual workarounds
+- Never provide financial or legal advice — flag these for the founder
 
 ---
 

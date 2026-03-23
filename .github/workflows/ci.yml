@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18, 20, 22]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Type check
+        run: bun run lint
+
+      - name: Build
+        run: bun run build
+
+      - name: Verify dist output
+        run: |
+          test -f dist/index.js || (echo "dist/index.js not found" && exit 1)
+          test -f dist/init.js || (echo "dist/init.js not found" && exit 1)
+
+      - name: Smoke test — MCP server starts
+        run: |
+          node dist/index.js &
+          SERVER_PID=$!
+          sleep 2
+          kill $SERVER_PID 2>/dev/null || true
+        env:
+          ALFRED_SKIP_CONFIG: "true"

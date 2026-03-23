@@ -16,62 +16,75 @@
 
 ## Critical Facts
 
-<!-- Add the most important truths about your business here -->
-<!-- These are things your AI should NEVER get wrong -->
+<!-- These are things your AI should NEVER get wrong. Update as they change. -->
 
-- [What your company does in one sentence]
-- [Your primary revenue model]
-- [Number of clients / MRR / key metric]
-- [What makes you different from competitors]
+- {{COMPANY_NAME}} is a {{SERVICE_TYPE}} serving {{TARGET_MARKET}}
+- Primary revenue model: monthly retainers (avg ${{AVG_RETAINER}}/mo)
+- Currently managing {{CLIENT_COUNT}} active clients
+- Differentiator: {{ONE_LINE_DIFFERENTIATOR}}
+- Active product URL: {{PRODUCT_URL}}
+
+<!-- Example:
+- Apex Digital is a full-service digital agency serving e-commerce brands doing $1M-$10M in revenue
+- Primary revenue model: monthly retainers (avg $3,500/mo)
+- Currently managing 8 active clients
+- Differentiator: We own the full stack — ads, landing pages, email, and analytics — no handoffs
+- Active product URL: portal.apexdigital.com
+-->
 
 ---
 
 ## Current Priorities
 
-<!-- Update this weekly — what are the top 3 things you're focused on? -->
+<!-- Update weekly — what are the top 3 things you're focused on? -->
 
-1. [Priority 1]
-2. [Priority 2]
-3. [Priority 3]
+1. Close the Meridian Fitness renewal ($3,500/mo at risk — contract ends April 15)
+2. Launch NovaTech Q2 Meta campaign (creative due by March 28)
+3. Hire part-time media buyer (interviewing 3 candidates this week)
 
 ---
 
 ## Team
 
-| Name | Role | Slack ID | Notes |
-|------|------|----------|-------|
-| {{FOUNDER_NAME}} | Founder | | Decision maker |
-<!-- Add team members as you grow -->
+| Name | Role | Slack ID | Capacity | Notes |
+|------|------|----------|----------|-------|
+| {{FOUNDER_NAME}} | Founder | | | Decision maker, client relationships |
+| Sarah Kim | Creative Director | U0XYZ789 | 85% | Handles all ad creative and landing pages |
+| Marcus Chen | Developer | U0ABC123 | 70% | Frontend, site builds, tracking setup |
+| Jake Torres | Media Buyer | U0DEF456 | 90% | Meta, Google, TikTok campaign management |
 
 ---
 
-## Clients
+## Active Clients
 
-<!-- Track your active clients and their status -->
-
-| Client | Service | Monthly Value | Health | Notes |
-|--------|---------|--------------|--------|-------|
-| | | | | |
+| Client | Service | Monthly | Health | Renewal | Notes |
+|--------|---------|---------|--------|---------|-------|
+| Meridian Fitness | Meta Ads + LP | $3,500 | YELLOW | Apr 15 | ROAS dropped from 4.2 to 2.8 — needs creative refresh |
+| Coastal Dental | SEO + Content | $2,800 | GREEN | Jun 1 | Ranking #3 for "dentist near me" — pushing for #1 |
+| NovaTech Solutions | Full Stack | $5,200 | GREEN | Jul 15 | Best client. Expanding to TikTok Q2. |
+| FreshBrew Coffee | Social Media | $1,800 | RED | Mar 30 | Unresponsive. 2 missed approval deadlines. Churn risk. |
 
 ---
 
 ## Key Decisions
 
-<!-- Log important decisions so your AI has context -->
-
 | Date | Decision | Rationale |
 |------|----------|-----------|
-| | | |
+| 2026-03-01 | Monthly retainers only — no project work | Predictable revenue, deeper relationships, better planning |
+| 2026-03-10 | Dropped TikTok as a standalone service | Not enough volume to justify. Bundle only with full-stack. |
+| 2026-03-15 | Installed Alfred as agency brain | Centralizes ops, automates reporting, teaches AI agency workflows |
 
 ---
 
 ## Hard Rules
 
-<!-- Things your AI must ALWAYS or NEVER do -->
+<!-- Non-negotiable rules your AI must always follow -->
 
 - Never share client data between accounts
-- Always use [your preferred tools] for [specific tasks]
-- Never commit to timelines without checking capacity
+- Never DM team members without referencing the specific issue/project
+- Never commit to client timelines without checking with {{FOUNDER_NAME}}
+- All client-facing deliverables need human approval before sending
+- Financial decisions above $500 require founder sign-off
 
 ---
 
@@ -79,8 +92,11 @@
 
 | Tool | Purpose | Access |
 |------|---------|--------|
-| Jira | Project management | [your-instance].atlassian.net |
-| Slack | Team communication | [workspace].slack.com |
+| Jira | Sprint management | {{JIRA_HOST}} |
+| Slack | Team communication | {{SLACK_WORKSPACE}} |
+| Vercel | Deployment | Connected via Alfred |
+| Meta Business Suite | Ad management | Manual (Alfred v1.1) |
+| QuickBooks | Invoicing | Manual (Alfred v1.2) |
 
 ---
 

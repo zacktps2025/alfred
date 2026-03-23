@@ -1,5 +1,5 @@
 name: alfred
-description: "The open-source agency brain. MCP server with 9 tools + 10 skills for managing projects, clients, ads, funnels, content, and operations."
+description: "The open-source agency brain. MCP server with 9 tools, 36 prompts, and 10 skills — turns your AI copilot into a full agency operations machine. Manage projects, clients, ads, funnels, content, sales, and finances."
 author: alfredify
 homepage: https://alfredify.com
 repository: https://github.com/zacktps2025/alfred
@@ -11,8 +11,12 @@ tags:
   - slack
   - ads
   - smma
+  - content
+  - sales
+  - funnels
   - reporting
   - operations
+  - mcp-server
 startCommand:
   type: stdio
   configSchema:

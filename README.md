@@ -11,8 +11,9 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/alfred-agency"><img src="https://img.shields.io/npm/v/alfred-agency.svg?style=flat-square&color=8535e9" alt="npm version" /></a>
-  <a href="https://github.com/alfredify/alfred/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/zacktps2025/alfred/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square" alt="License" /></a>
   <a href="https://alfredify.com"><img src="https://img.shields.io/badge/dashboard-alfredify.com-8535e9?style=flat-square" alt="Dashboard" /></a>
+  <a href="https://smithery.ai/server/@alfredify/alfred"><img src="https://smithery.ai/badge/@alfredify/alfred" alt="Smithery" /></a>
 </p>
 
 ---
@@ -23,7 +24,7 @@ Alfred is an MCP server + skill system that turns your AI copilot (Claude Code, 
 
 **Without Alfred:** Your AI writes code and answers questions.
 
-**With Alfred:** Your AI manages your Jira sprints, posts to your Slack channels, writes ad copy that converts, builds sales funnels, generates client reports, tracks margins, designs landing pages, and runs your entire agency ops.
+**With Alfred:** Your AI manages your Jira sprints, posts to Slack, writes ad copy that converts, builds funnels, generates client reports, designs landing pages, writes proposals, runs cold outreach, and operates your entire agency.
 
 Built for **SMMA founders, digital agency owners, freelancers, and anyone running a service business** who wants to stop context-switching between 12 tools and start letting AI do the heavy lifting.
 
@@ -38,8 +39,6 @@ npx alfred-agency init
 That's it. Alfred's setup wizard walks you through everything.
 
 ### Manual Setup
-
-If you prefer to configure manually:
 
 ```bash
 # Add Alfred as an MCP server in Claude Code
@@ -83,37 +82,103 @@ Your AI can now call these tools directly:
 | `alfred://issues/open` | All open project issues with assignees, statuses, and stale days |
 | `alfred://issues/stale` | Issues with no update in 48+ hours |
 
-### 4 MCP Prompts (One-Click Reports)
+### 36 MCP Prompts — The Arsenal
+
+This is what makes Alfred different from every other MCP server. 36 battle-tested agency workflows, each producing structured, actionable output:
+
+<details>
+<summary><strong>Ads — 6 prompts</strong> (Meta, Google, TikTok, YouTube, creative briefs, campaign architecture)</summary>
 
 | Prompt | What It Generates |
 |--------|------------------|
-| `morning-briefing` | Daily ops briefing with open issues, stale items, priorities |
-| `weekly-report` | End-of-week summary with completed work, open items, velocity |
-| `client-update` | Professional client status update from live project data |
-| `agency-health-check` | Full health assessment with team workload, risks, action items |
+| `meta-ad-copy` | 5 Meta ad variations — AIDA-P framework, hooks, primary text, headlines, descriptions, CTAs |
+| `google-ad-copy` | 15 RSA headlines + 4 descriptions + extensions, character-count validated |
+| `tiktok-ad-script` | 3 native scripts in different formats — UGC, talking head, problem/solution |
+| `youtube-ad-script` | Pre-roll, mid-roll, and bumper scripts with hook-story-offer framework |
+| `ad-creative-brief` | Complete brief for designers — visual direction, messaging, deliverables checklist |
+| `campaign-structure` | Full campaign architecture — naming conventions, budget splits, audiences, kill/scale rules |
+
+</details>
+
+<details>
+<summary><strong>Sales — 6 prompts</strong> (cold outreach, proposals, case studies, scripts)</summary>
+
+| Prompt | What It Generates |
+|--------|------------------|
+| `cold-email` | 5-email outreach sequence — PAS/AIDA/BAB frameworks, subject line A/B variants |
+| `cold-dm` | Platform-native DM sequences for Instagram, LinkedIn, and X/Twitter |
+| `proposal` | Full client proposal — exec summary, scope, timeline, 3-tier pricing, terms |
+| `case-study` | 3 formats: full narrative (600 words), one-pager, and social proof snippets |
+| `sales-script` | Discovery call script — SPIN questions, objection handling matrix, closing framework |
+| `client-update` | Professional client status update pulled from live project data |
+
+</details>
+
+<details>
+<summary><strong>Content — 9 prompts</strong> (calendars, captions, blogs, video, email, repurposing)</summary>
+
+| Prompt | What It Generates |
+|--------|------------------|
+| `content-calendar` | 30-day calendar with hooks, formats, pillar distribution, batch production schedule |
+| `caption` | 3 variations per platform — Instagram, LinkedIn, X/Twitter, TikTok |
+| `repurpose` | 1 piece of content → 11+ pieces across every platform + distribution schedule |
+| `blog-post` | SEO-optimized post with meta tags, headers, internal links, CTA, social teasers |
+| `video-script` | Short-form (Reels/TikTok), long-form (YouTube), and VSL scripts with B-roll lists |
+| `carousel` | Slide-by-slide copy for Instagram/LinkedIn carousels with design notes |
+| `email-sequence` | Complete automation — welcome, nurture, abandoned cart, re-engagement sequences |
+| `twitter-thread` | Viral threads — story, listicle, contrarian, breakdown formats |
+| `newsletter` | Full edition — 5 subject lines, body, P.S. line, social teaser |
+
+</details>
+
+<details>
+<summary><strong>Ops — 7 prompts</strong> (SOPs, onboarding, reporting, meeting notes)</summary>
+
+| Prompt | What It Generates |
+|--------|------------------|
+| `morning-briefing` | Daily ops briefing from live Jira data |
+| `weekly-report` | End-of-week summary — completed, open, blocked, velocity |
+| `sop` | Step-by-step Standard Operating Procedure with quality checklists |
+| `client-onboarding` | Full package — access checklist, kickoff agenda, 30-day plan, welcome message |
+| `meeting-notes` | Structured summary — decisions, action items, owners, deadlines, follow-ups |
+| `data-story` | Raw metrics → compelling narrative with benchmarks and recommendations |
+| `client-report` | Professional monthly performance report with KPIs, trends, and action plan |
+
+</details>
+
+<details>
+<summary><strong>Strategy — 5 prompts</strong> (funnels, lead magnets, brand voice, landing pages, health checks)</summary>
+
+| Prompt | What It Generates |
+|--------|------------------|
+| `funnel` | Complete funnel blueprint — traffic, landing page, nurture, conversion, retargeting, economics |
+| `lead-magnet` | 3 lead magnet concepts with titles, outlines, and landing page copy |
+| `brand-voice` | Voice guide from content samples — tone scale, vocabulary, do/don't, platform adaptations |
+| `landing-page-copy` | Full page copy — hero, problem, solution, how it works, social proof, FAQ, CTA |
+| `agency-health` | 8-dimension scorecard with scores (1-10), top risks, 90-day action plan |
+
+</details>
 
 ### 10 Agency Skills
 
-Skills are intelligence modules that teach your AI how to think about agency work. They install to `~/.claude/skills/` and activate automatically when relevant.
+Skills are intelligence modules — deep domain knowledge that teaches your AI how to think about agency work:
 
 | Skill | Domain | What Your AI Learns |
 |-------|--------|-------------------|
-| **alfred-ops** | Operations | Sprint planning, task delegation, stale detection, capacity management |
-| **alfred-clients** | Client Management | Onboarding, health scoring, retention playbooks, communication protocols |
-| **alfred-ads** | Paid Media | Campaign architecture, AIDA-P copy framework, A/B testing, performance analysis |
-| **alfred-funnels** | Conversion | Funnel design, offer architecture, landing pages, CRO audits |
-| **alfred-content** | Content Production | LinkedIn posts, blogs, emails, video scripts, repurposing engine |
-| **alfred-sales** | Sales & Outreach | Cold email sequences, proposals, discovery calls, objection handling |
-| **alfred-reports** | Reporting | Client updates, morning briefings, KPI dashboards, financial summaries |
-| **alfred-systems** | Systems & Automation | SOPs, workflow design, agent architecture, tool stack optimization |
-| **alfred-finance** | Financial Intelligence | Pricing strategy, margin analysis, invoicing, P&L management |
-| **alfred-design** | UI/UX | Typography systems, color palettes, responsive design, performance targets |
+| **alfred-ops** | Operations | Sprint planning, stale detection, capacity management, delegation matrix |
+| **alfred-clients** | Clients | Onboarding (72-hour rule), health scoring, retention, churn indicators |
+| **alfred-ads** | Paid Media | Campaign architecture, AIDA-P copy, A/B testing protocol, performance benchmarks |
+| **alfred-funnels** | Conversion | Funnel types, offer architecture, landing page blueprint, CRO audit |
+| **alfred-content** | Content | LinkedIn/blog/email/video frameworks, repurposing engine, content calendar |
+| **alfred-sales** | Sales | SPIN framework, cold outreach, proposals, objection handling, follow-up sequences |
+| **alfred-reports** | Reporting | Client reports, KPI dashboards, morning briefings, 3-second rule |
+| **alfred-systems** | Systems | SOP qualification matrix, automation spectrum, agent architecture |
+| **alfred-finance** | Finance | Pricing (3x multiplier), margin targets, invoicing, P&L templates |
+| **alfred-design** | UI/UX | Typography systems, color palettes, responsive breakpoints, performance targets |
 
 ---
 
 ## Integrations
-
-Alfred connects to the tools you already use:
 
 | Integration | What Alfred Can Do | Setup |
 |-------------|-------------------|-------|
@@ -125,263 +190,148 @@ Alfred connects to the tools you already use:
 | **Google Ads** | Campaign data, performance reporting | *Coming v1.1* |
 | **QuickBooks** | Financial sync, invoice tracking | *Coming v1.2* |
 
-### Connect During Setup
-
-The `alfred-init` wizard prompts you for each integration. You can skip any and add them later.
-
-### Connect Later
-
-Edit your config at `~/.alfred/config.json` or re-run:
-
-```bash
-npx alfred-agency init
-```
-
 ---
 
 ## Use Cases
 
-### SMMA / Digital Agency Owner
-
-> "Hey Alfred, what's the status of all my client projects?"
-
-Alfred pulls your Jira board, identifies stale tasks, and generates a briefing.
-
-> "Write a Meta ad for my client's fitness coaching program. $47/month offer, targeting women 25-40."
-
-Alfred uses the `alfred-ads` skill to write AIDA-P formatted ad copy with hooks, primary text, headlines, and CTA.
-
-> "Create a 5-email welcome sequence for leads who download our marketing audit template."
-
-Alfred uses the `alfred-funnels` skill to architect the sequence with timing, subject lines, and body copy.
-
-### Freelancer / Consultant
-
-> "Generate a proposal for a $3K/month SEO retainer for a local dental practice."
-
-Alfred uses `alfred-sales` to structure the proposal — executive summary, approach, pricing, next steps.
-
-> "What should I charge for a full website redesign? My competitor charges $8K."
-
-Alfred uses `alfred-finance` to analyze pricing strategy, margin targets, and competitive positioning.
-
-### Agency Ops Manager
-
-> "Give me the morning briefing."
-
-Alfred generates: open issues, stale items, team workload, blockers, and today's priorities.
-
-> "Post to #team-updates: Sprint 14 starts today. Focus areas: Client X website launch, Client Y ad refresh."
-
-Alfred posts directly to your Slack channel.
-
----
-
-## The Skills in Action
-
-### alfred-ads — Write Ad Copy That Converts
+### "Write me Meta ads"
 
 ```
-You: Write Meta primary text for a $2K/month agency retainer targeting e-commerce brands.
+You: Write Meta ad copy for a $2K/month agency retainer targeting e-commerce brands.
 
-Alfred (using alfred-ads skill):
+Alfred generates 5 complete variations:
 
-HOOK: "Your ad account is printing money — for Meta, not for you."
+VARIATION 1 — Pain Point Hook:
+"Your ad account is printing money — for Meta, not for you."
+→ Full primary text (125 words)
+→ 3 headlines (each under 27 chars)
+→ 2 descriptions
+→ CTA: Book Your Free Audit
+→ Creative direction note
 
-PRIMARY TEXT:
-"Your ad account is printing money — for Meta, not for you.
-
-We audit 3-5 e-commerce ad accounts per week. The pattern is always the same:
-→ Broad audiences burning budget on window shoppers
-→ Creative fatigue going undetected for weeks
-→ No testing framework — just vibes
-
-Our clients see 40-60% ROAS improvement in 90 days. Not from spending more.
-From spending smarter.
-
-We manage everything: creative strategy, audience architecture, daily optimization,
-and weekly reporting you actually understand.
-
-$2K/month. Cancel anytime. Results in 30 days or we refund month one."
-
-CTA: "Book Your Free Ad Account Audit"
+VARIATION 2 — Social Proof Hook
+VARIATION 3 — Contrarian Hook
+VARIATION 4 — Curiosity Hook
+VARIATION 5 — Direct Offer Hook
 ```
 
-### alfred-funnels — Design Converting Funnels
+### "Turn this into content for every platform"
 
 ```
-You: Design a lead magnet funnel for a marketing agency targeting SaaS companies.
+You: Repurpose this blog post about agency pricing.
 
-Alfred (using alfred-funnels skill):
+Alfred generates 11 pieces:
+ 1. LinkedIn post (professional insight)
+ 2. Instagram caption (storytelling + hashtags)
+ 3. X/Twitter thread (8 tweets)
+ 4. Single tweet (most quotable line)
+ 5. TikTok script (30 seconds)
+ 6. Email newsletter snippet
+ 7. Carousel (8 slides, copy + design notes)
+ 8. Quote graphic text
+ 9. Blog expansion section
+10. Podcast talking points
+11. Community discussion post
+ +  10-day distribution schedule
+```
 
-FUNNEL: Lead Magnet → Nurture → Application
+### "Run the morning briefing"
 
-LEAD MAGNET: "The SaaS Growth Audit Template"
- - Format: Interactive spreadsheet + video walkthrough
- - Promise: "Find the 3 biggest leaks in your growth engine in 15 minutes"
+```
+You: Morning briefing.
 
-LANDING PAGE:
- 1. Hero: "Your SaaS is leaking revenue. Find out where."
- 2. Problem: 3 specific pain points SaaS founders face
- 3. Solution: What the audit template reveals
- 4. Social proof: "Used by 200+ SaaS companies"
- 5. CTA: "Get Your Free Growth Audit Template"
+Alfred pulls live Jira data:
+ • 14 open issues (3 critical, 5 high, 6 medium)
+ • 4 stale issues (no update in 48+ hours) — with assignee pings
+ • Team workload: Sarah (6), Marcus (4), Jake (3), Unassigned (1)
+ • Today's priorities: [ranked by urgency]
+```
 
-NURTURE SEQUENCE (5 emails, 10 days):
- Day 0: Deliver the template + quick-start video
- Day 2: "Did you find Leak #1?" — expand on the first insight
- Day 5: Case study — SaaS company that fixed their leaks
- Day 7: "The leaks compound" — cost of inaction
- Day 10: "We fix this for a living" — application CTA
+### "Write a cold email sequence"
+
+```
+You: Cold email sequence targeting SaaS founders doing $1M-$10M ARR.
+
+Alfred generates a 5-email sequence:
+ Email 1 (Day 1): The PAS Opener — pain, agitation, soft CTA
+ Email 2 (Day 3): The Value Add — useful insight, no ask
+ Email 3 (Day 6): The Proof — case study with specific numbers
+ Email 4 (Day 10): The Breakup Tease — scarcity angle
+ Email 5 (Day 14): The Permission Close — "should I stop emailing?"
+
+Each with: Subject line A/B variants, full body copy, personalization tokens
 ```
 
 ---
 
 ## OS Templates
 
-Alfred ships with founding-team operating templates that install to your project root:
+Alfred ships with founding-team operating templates:
 
-| Template | What It Creates |
-|----------|----------------|
-| `CLAUDE.md` | An operating manual for your AI — tells Claude Code how your company works, who does what, and what rules to follow |
-| `MEMORY.md` | Strategic memory that persists across AI sessions — key facts, decisions, team info |
-| `DECISIONS.md` | Decision log — what you decided, why, and what it forecloses |
-| `PEOPLE.md` | Team directory — Slack IDs, Jira IDs, roles, communication preferences |
-
-These aren't just config files. They're the operating system for your founding team's AI-augmented workflow.
+| Template | Purpose |
+|----------|---------|
+| `CLAUDE.md` | Operating manual for your AI — company info, rules, team, integrations |
+| `MEMORY.md` | Strategic memory that persists across AI sessions |
+| `DECISIONS.md` | Decision log — what, why, what it forecloses |
+| `PEOPLE.md` | Team directory — IDs, roles, communication preferences |
 
 ---
 
-## Example Configurations
+## Architecture
 
-Alfred ships with preset configs for common agency types:
-
-```bash
-# During setup, choose your agency type:
-npx alfred-agency init
-
-# Or use a preset directly:
-cp node_modules/alfred-agency/examples/agency/config.json ~/.alfred/config.json
 ```
-
-| Preset | Optimized For |
-|--------|--------------|
-| `agency` | Full-service digital agency (ads + content + design + dev) |
-| `saas` | SaaS company with marketing team |
-| `consultancy` | Solo consultant or small advisory firm |
+Your AI Copilot (Claude Code / Cursor / Gemini CLI)
+          |
+          |--- calls 9 tools -----------> Jira, Slack, Search, Vercel
+          |
+          |--- reads 2 resources -------> Open issues, stale items
+          |
+          |--- invokes 36 prompts ------> Ads, sales, content, ops, funnels...
+          |
+          |--- thinks with 10 skills ---> Deep agency domain knowledge
+```
 
 ---
 
 ## Roadmap
 
-### v1.0 — The Brain (Now)
-
-- 9 MCP tools (Jira, Slack, web search, Vercel, reporting)
-- 10 agency skills (ops, clients, ads, funnels, content, sales, reports, systems, finance, design)
-- 4 MCP prompts (morning briefing, weekly report, client update, health check)
-- OS templates (CLAUDE.md, MEMORY.md, DECISIONS.md, PEOPLE.md)
-- 16-bit wizard setup experience
-
-### v1.1 — The Ad Machine (April 2026)
-
-- Meta Ads integration (campaign data, performance analysis, copy generation)
-- Google Ads integration (campaign data, keyword performance)
-- Ad Account Auditor agent
-- Creative Fatigue Detector
-- ROAS forecasting tools
-
-### v1.2 — The Money Brain (May 2026)
-
-- QuickBooks integration (financial sync, invoice tracking)
-- Profitability calculator per client
-- Cash flow forecasting
-- Automated invoice reminders
-- Monthly P&L generation
-
-### v2.0 — The Full OS (Summer 2026)
-
-- 100 skills across 10 categories
-- Multi-client management
-- Scheduled autonomous agents
-- Team collaboration features
-- Full-stack agency automation
-
----
-
-## How It Works
-
-Alfred is a [Model Context Protocol](https://modelcontextprotocol.io/) server. MCP is a standard that lets AI copilots use external tools and data sources.
-
-```
-Your AI Copilot (Claude Code / Cursor / Gemini CLI)
-          │
-          ├── asks Alfred for data ──→ MCP Tools (Jira, Slack, Search)
-          │
-          ├── reads Alfred's data ──→ MCP Resources (open issues, stale items)
-          │
-          ├── uses Alfred's templates ──→ MCP Prompts (briefings, reports)
-          │
-          └── thinks with Alfred's brain ──→ Skills (ads, funnels, sales, ops...)
-```
-
-When you ask your AI a question about agency work, it automatically:
-1. Checks if an Alfred tool can fetch the data
-2. References the relevant Alfred skill for domain expertise
-3. Generates output using real data + agency intelligence
+| Version | Name | What Ships |
+|---------|------|-----------|
+| **v1.0** | The Brain | 9 tools, 36 prompts, 10 skills, OS templates, wizard setup |
+| **v1.1** | The Ad Machine | Meta Ads API, Google Ads API, ad auditor, creative fatigue detector |
+| **v1.2** | The Money Brain | QuickBooks, profitability calculator, cash flow, invoice automation |
+| **v2.0** | The Full OS | 100 skills, multi-client management, scheduled agents, team collab |
 
 ---
 
 ## Contributing
 
-Alfred is open-source under the Apache 2.0 license. Contributions welcome.
-
 ```bash
-# Clone the repo
-git clone https://github.com/alfredify/alfred.git
-cd alfred
-
-# Install dependencies
-bun install
-
-# Run in dev mode
-bun run dev
-
-# Test with MCP Inspector
-bun run inspect
+git clone https://github.com/zacktps2025/alfred.git
+cd alfred && bun install
+bun run dev        # Dev mode with watch
+bun run lint       # Type check
+bun run inspect    # MCP Inspector
 ```
 
-### Ways to Contribute
-
-- **New skills**: Write a SKILL.md for a domain Alfred doesn't cover yet
-- **New integrations**: Add a lib client for a tool agencies use
-- **Bug fixes**: Open an issue or submit a PR
-- **Docs**: Improve setup guides, add tutorials, write case studies
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
 ## Full Dashboard
 
-Alfred is the open-source brain. **Alfredify** is the full agency dashboard.
-
-When you outgrow the terminal, Alfredify gives you:
-- Visual project management across all clients
-- Ad account dashboards with automated reporting
-- Financial tracking (invoicing, margins, P&L)
-- Team management with workload balancing
-- Client portal with branded reports
-- Scheduled automations (morning briefings, stale alerts, weekly reports)
-
-**[alfredify.com](https://alfredify.com)** — The full agency OS.
+Alfred is the open-source brain. **[Alfredify](https://alfredify.com)** is the full agency dashboard — visual project management, ad dashboards, financial tracking, team management, client portal, and scheduled automations.
 
 ---
 
 ## License
 
-Apache 2.0 — use it, modify it, build on it. See [LICENSE](LICENSE) for details.
+Apache 2.0 — use it, modify it, build on it. See [LICENSE](LICENSE).
 
 ---
 
 <p align="center">
   <strong>Alfred — The Open-Source Agency Brain</strong><br>
+  <em>9 tools. 36 prompts. 10 skills. One install.</em><br>
   <em>Built by <a href="https://alfredify.com">Alfredify</a> for digital wizards everywhere.</em>
 </p>

@@ -8,53 +8,70 @@
 
 ## How to Use This File
 
-When you make a strategic decision, log it here with:
+When you make a strategic decision, log it here:
 1. **What** you decided
 2. **Why** you decided it
 3. **What it forecloses** (what you're NOT doing as a result)
 4. **Revisit date** (when to reconsider, if ever)
 
+Your AI references this file before suggesting alternatives to settled decisions. If it's logged here, the debate is over unless the revisit date has passed.
+
 ---
 
 ## Active Decisions
 
-### [Decision Title]
-- **Date:** YYYY-MM-DD
-- **What:** [The decision]
-- **Why:** [The reasoning]
-- **Forecloses:** [What this rules out]
-- **Revisit:** [Date or "permanent"]
-
-<!--
-Example:
-
-### Pricing Model: Monthly Retainer Only
-- **Date:** 2026-03-15
+### Pricing: Monthly Retainer Only
+- **Date:** 2026-03-01
 - **What:** All client engagements are monthly retainer. No project-based or hourly billing.
-- **Why:** Predictable revenue, deeper client relationships, better capacity planning.
-- **Forecloses:** Project-based work, hourly consulting, one-off engagements.
-- **Revisit:** After reaching $50K MRR — may add project tier for enterprise.
--->
+- **Why:** Predictable revenue, deeper client relationships, better capacity planning. Hourly billing punishes efficiency and creates misaligned incentives.
+- **Forecloses:** One-off projects, hourly consulting, website-only builds.
+- **Revisit:** After reaching $50K MRR — may add a project tier for enterprise.
+
+### Service Packaging: 3-Tier Structure
+- **Date:** 2026-03-05
+- **What:** Every service offered in 3 tiers — Growth ($2K-3K), Scale ($3K-5K), Dominate ($5K-8K).
+- **Why:** Anchoring effect, easy upsell path, clients self-select into budget range. Eliminates custom scoping for every deal.
+- **Forecloses:** Custom pricing per client, single-tier offers, value-based pricing experiments.
+- **Revisit:** After 20 clients signed — adjust tiers based on actual delivery costs.
+
+### Channel Strategy: Meta + Google Only (for now)
+- **Date:** 2026-03-10
+- **What:** Only offer Meta Ads and Google Ads management. TikTok and YouTube as add-ons only.
+- **Why:** Team expertise is deepest here. Spreading across 4 platforms dilutes quality. Better to be exceptional at 2 than mediocre at 4.
+- **Forecloses:** Standalone TikTok management, LinkedIn Ads, programmatic display.
+- **Revisit:** Q3 2026 — hire dedicated TikTok buyer, then expand.
+
+### Tooling: Alfred as Agency Brain
+- **Date:** 2026-03-15
+- **What:** Alfred MCP server is the central operations layer. All project management, reporting, and team communication runs through Alfred.
+- **Why:** One install gives the AI copilot agency-grade capabilities. Reduces context-switching between tools. Skills teach the AI how to think about agency work.
+- **Forecloses:** Using Notion/ClickUp/Monday as project management. Manual reporting workflows.
+- **Revisit:** Permanent — expand Alfred, don't replace it.
+
+### Client Communication: Weekly Updates, No Exceptions
+- **Date:** 2026-03-08
+- **What:** Every active client receives a written status update every Friday by 3PM.
+- **Why:** Proactive communication prevents "what's happening?" emails. Builds trust. Makes renewals easier. Alfred automates the data pull.
+- **Forecloses:** Ad-hoc updates, "we'll update when there's news" approach, client portal as replacement for personal updates.
+- **Revisit:** Never. This is a cultural decision.
 
 ---
 
 ## Pending Decisions
 
-<!-- Decisions that need to be made but haven't been resolved yet -->
-
-| Decision | Options | Owner | Deadline |
-|----------|---------|-------|----------|
-| | | | |
+| Decision | Options | Owner | Deadline | Notes |
+|----------|---------|-------|----------|-------|
+| Hire media buyer or promote Jake? | Hire external / Promote Jake + hire junior | {{FOUNDER_NAME}} | Apr 1 | Jake at 90% capacity. Need decision before Q2 campaigns ramp. |
+| Offer SEO as standalone service? | Yes (new tier) / No (bundle only) / Test with 2 clients | {{FOUNDER_NAME}} | Apr 15 | 3 inbound leads asked for SEO-only in March. |
+| Switch invoicing to QuickBooks or Stripe? | QuickBooks (accounting) / Stripe Billing (simpler) | {{FOUNDER_NAME}} | May 1 | Currently using manual invoices. Unsustainable past 10 clients. |
 
 ---
 
 ## Reversed Decisions
 
-<!-- Decisions that were made but later changed — and why -->
-
 | Original Decision | Date Reversed | New Decision | Why Changed |
 |-------------------|--------------|--------------|-------------|
-| | | | |
+| Offer TikTok as standalone | 2026-03-10 | Bundle only with full-stack | Not enough volume. Only 1 of 8 clients wanted it standalone. Team wasn't deep enough on platform. |
 
 ---
 
